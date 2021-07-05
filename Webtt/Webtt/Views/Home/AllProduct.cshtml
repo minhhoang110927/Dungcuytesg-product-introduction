@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Tất cả sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<contents>
+    <div class="w-clear wikis">
+        <div class="w-clear">
+            <div class="w-clear">
+                <div class="main-tit">
+                    <h2 class="name">Tất cả sản phẩm</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-2">
+                    <div class="box-sp w-clear">
+                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                            <div class="images" style="text-align:center; height:178px">
+                                <img src="~/img/@item.ProductImage" alt="" style="max-height:100%; max-width:100%">
+                            </div>
+                        </a>
+                        <div class="info w-clear">
+                            <div class="w-clear">
+                                <a href="" tabindex="-1">
+                                    <h3>
+                                        @item.ProductName
+                                    </h3>
+                                </a>
+                                <div class="info-gia flex">
+                                    <div class="gia">
+                                        Giá:
+                                        <span>@item.ProductPrice</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</contents>

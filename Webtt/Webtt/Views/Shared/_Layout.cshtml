@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/admin/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/css/banner.css">
+    <link rel="stylesheet" href="/assets/css/css/menu.css">
+    <link rel="stylesheet" href="/assets/css/css/contact.css">
+    <link rel="stylesheet" href="/assets/css/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/css/content.css">
+    <link rel="stylesheet" href="/assets/css/css/slide.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/detail-product.css" />
+    <link rel="stylesheet" href="~/css/banner.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/contact.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+    <link rel="stylesheet" href="~/css/content.css" />
+    <link rel="stylesheet" href="~/css/slide.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="~/js/btn-top.js"></script>
+    <title>@ViewData["Title"]</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="Contact">
+            <div class="Contact_header">
+                <div class="Contact_header--l">
+                    <span class="w-clear diachi">
+                        <i class="fas fa-map-marker-alt"></i>
+                        849 Nguyễn Kiệm - Phường 3 - Quận Gò Vấp - TP.HCM
+                    </span>
+                </div>
+                <div class="Contact_header--r">
+                    <span class="email">
+                        <i class="far fa-envelope"></i> Email: dungcuytesaigon2402@gmail.com
+                    </span>
+                    <span class="w-clear ">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- banner -->
+        <div id="banner" class="">
+            <div class="banner w-clear wikis">
+                <div class="flex">
+                    <div class="banner-l">
+                        <a asp-action="Index" asp-controller="Home" class="logo ">
+                            <img src="~/img/82256_logo_vi.png" alt="DỤNG CỤ Y TẾ SÀI GÒN " />
+                        </a>
+                    </div>
+                    <div class="banner-mid">
+                        <a href="">
+                            <img src="~/img/51207_banner_vi.png" alt="Banner" class="banner_img 	" />
+                        </a>
+                        <form class="search" method="get">
+                            <input type="text" id="keyword" class="input" name="search" value="" placeHolder="Tìm kiếm sản phẩm ..." onkeypress="doEnter(event)" required />
+                            <button type="submit" class="bt-search" data-toggle="tooltip" asp-action="Search" asp-controller="Home">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    <div class="banner-right w-clear">
+                        <div class="door">
+                            Giờ mở cửa:
+                            <span>7 Day a week  8:00 - 21:00 </span>
+                        </div>
+                        <span class="hotline">
+                            <div class="">Hotline: </div>
+                            <div>
+                                <span>091 528 2266 </span>
+                                <span>- 093 885 2120</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+        <div id="main">
+            <div id="header">
+                <ul id="nav">
+                    <li class="homepage"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+                    <li><a asp-action="About" asp-controller="Home">Giới thiệu</a>
+                    <li><a asp-action="AllProduct" asp-controller="Home">Sản phẩm</a></li>
+                    <li><a asp-action="News" asp-controller="Home">Tin tức - sự kiện</a></li>
+                    <li><a asp-action="Contact" asp-controller="Home">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer>
+        <!-- zalo -->
+        <div class="zalo-chat-widget" data-oaid="390457507174567693" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+        <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+        <div id="footer">
+            <div class="wikis w-clear  ">
+                <div class="flex ft-content">
+                    <div class="ft-1 flex">
+                        <div class="logo_ft">
+                            <a asp-action="Index" asp-controller="Home">
+                                <img src="~/img/82256_logo_vi.png" alt="DỤNG CỤ Y TẾ SÀI GÒN " />
+                            </a>
+                        </div>
+                        <div class="w-clear">
+                            <div class="ft-name">
+                                DỤNG CỤ Y TẾ SÀI GÒN
+                            </div>
+                            <div class="w-clear">
+                                <p><span style="font-size:18px;"><strong>CTY TNHH SX & TM DỤNG CỤ Y TẾ SÀI GÒN </strong></span></p>
+                                <p><span style="font-size:14px;"><strong>Địa chỉ:</strong> </span>849 Nguyễn Kiệm - P.3 -<span style="font-size:14px;"> Q.Gò Vấp - TP.HCM</span></p>
+                                <p><span style="font-size:14px;"><strong>Hotline:</strong> 091 528 2266 - </span>093 885 2120 </p>
+                                <p><strong style="font-size: 14px;">Email:</strong><span style="font-size: 14px;"> </span>dungcuytesaigon2402@gmail.com</p>
+                                <p><span style="font-size:14px;"><strong>Website:</strong> www.dungcuytesaigon.com</span></p>
+                                <p><span style="font-size:14px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: 14px;">www.dungcuykhoasaigon.com</span></p>
+                                <p><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.dungcuthammysaigon.com</span></p>
+                                <p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.thietbiykhoasaigon.com</span></p>
+                                <p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.thietbiytesaigon.com.vn</span></p>
+                            </div>
+                            <div class="w-clear">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ft-2 w-clear">
+                        <div class="ft-tit">Hỗ trợ khách hàng</div>
+                        <div class="w-clear">
+                            <p>
+                                <a href="ho-tro/chuong-trinh-khuyen-mai.html">
+                                    <i class="fas fa-caret-right"></i> Chương trình khuyến mãi
+                                </a>
+                            </p>
+                            <p>
+                                <a href="ho-tro/chinh-sach-mua-hang.html">
+                                    <i class="fas fa-caret-right"></i> Chính sách mua hàng
+                                </a>
+                            </p>
+                            <p>
+                                <a href="ho-tro/thoi-gian-giao-hang.html">
+                                    <i class="fas fa-caret-right"></i> Thời gian giao hàng
+                                </a>
+                            </p>
+                        </div>
+                        <div class="w-clear ">
+                        </div>
+                    </div>
+                    <div class="ft-3 w-clear">
+                        <div class="ft-tit">Fanpage facebook</div>
+                        <div class="fb-page" data-width="500" data-height="250" data-tabs="" data-href="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <div class="fb-xfbml-parse-ignore">
+                                <blockquote cite="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153">
+                                    <a href="https://www.facebook.com/C%C3%B4ng-ty-D%E1%BB%A5ng-C%E1%BB%A5-Y-T%E1%BA%BF-S%C3%A0i-G%C3%B2n-111311423809153">Facebook</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear reserved">
+            <div class="w-clear">
+                <div class="wikis flex">
+                    <div class="w-clear fl">
+                        Coppyright &copy 2019 <span>Dụng Cụ Y Tế Sài Gòn </span>. All right reserved. Design by <span>Nina</span>
+                    </div>
+                    <div class="w-clear fr">
+                        Đang online:     12 |
+                        Tổng truy cập:     193855
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="on-top">
+        <a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;">
+            <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 aaxa7vy3" height="34" width="34">
+                <path d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29"></path>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>

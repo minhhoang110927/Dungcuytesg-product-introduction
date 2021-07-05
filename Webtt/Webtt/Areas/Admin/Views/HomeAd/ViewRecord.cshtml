@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Webtt.Models.Contact>
+
+@{ ViewData["Title"] = "Thư liên hệ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+
+<div class="Add">
+    <div class="Add-product">
+        <h2>Thư liên hệ : @ViewBag.Count</h2>
+    </div>
+</div>
+<div class="details-product">
+    <div class="products">
+        <table>
+            <thead>
+                <tr>
+                    <td>Tên người liên hệ</td>
+                    <td>Số điện thoại</td>
+                    <td>Email</td>
+                    <td>Nội dung</td>
+                    <td>Tùy chọn</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr>
+        <td>@item.ContactName</td>
+        <td>@item.ContactNumber</td>
+        <td>@item.ContactEmail</td>
+        <td>@item.Content</td>
+        <td>
+            <a asp-action="DeleteRecord" asp-controller="HomeAd" asp-route-id="@item.ContactId">
+                <i class=" delete fa fa-trash" aria-hidden="true"></i>
+            </a>
+        </td>
+    </tr>}
+            </tbody>
+        </table>
+    </div>
+</div>

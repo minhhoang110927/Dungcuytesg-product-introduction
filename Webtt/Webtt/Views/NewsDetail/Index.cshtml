@@ -1,0 +1,42 @@
+﻿@model Webtt.Models.News
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.NewsTitle);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<contents>
+    <div class="container-new w-clear">
+        <div class="w-clear wikis">
+            <div class="w-clear">
+                <div class="w-clear">
+                    <div class="title">
+                        <h2>@Html.DisplayFor(model => model.NewsTitle)</h2>
+                    </div>
+                    <div class="img-new">
+                        <img src="~/img/@Html.DisplayFor(model => model.NewsImage)" width="600" height="300">
+                    </div>
+                    <div class="content-new">
+                        <p>
+                            @Html.DisplayFor(model => model.NewsContent)
+                        </p>
+                    </div>
+                </div>
+                <section class="news">
+                    <h2>
+                        <span>Bài viết liên quan</span>
+                    </h2>
+                    <ul>
+                        @foreach (var item in ViewBag.NewsRelate)
+                        {
+                            <li>
+                                <a asp-action="Index" asp-controller="NewsDetail" asp-route-id="@item.NewsId" asp-route-name="@item.NewsTitle" tabindex="-1" title="">
+                                    @item.NewsTitle
+                                </a>
+                                <img alt="@item.NewsTitle" src="~/img/@item.NewsImage">
+                            </li>
+                        }
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</contents>

@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Liên hệ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Webtt.Models.Contact
+<contents>
+    <div class="w-clear wikis">
+        <div class="w-clear">
+            <div class="w-clear">
+                <div class="main-tit">
+                    <h2 class="name">Liên hệ</h2>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="w-clear">
+                <div class="flex col_2">
+                    <div class="w-clear">
+                        <p><span style="font-size: 18px;"><strong>CTY TNHH SX & TM DỤNG CỤ Y TẾ SÀI GÒN </strong></span></p>
+                        <p><span style="font-size: 14px;"><strong>Cửa hàng:</strong> </span>849 Nguyễn Kiệm - P.3 -<span style="font-size: 14px;"> Q.Gò Vấp - TP.HCM.</span></p>
+                        <p><span style="font-size: 14px;"><strong>Hotline:</strong> 090 860 6987 - </span>093 885 2120 </p>
+                        <p><strong style="font-size: 14px;">Email:</strong><span style="font-size: 14px;"> </span>dungcuytesaigon2402@gmail.com</p>
+                        <p><span style="font-size: 14px;"><strong>Website:</strong> www.dungcuytesaigon.com</span></p>
+                        <p><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 14px;">www.dungcuykhoasaigon.com</span></p>
+                        <p><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  www.dungcuthammysaigon.com</span></p>
+                        <p><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  www.thietbiykhoasaigon.com</span></p>
+                        <p><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   www.thietbiytesaigon.com.vn</span></p>
+                    </div>
+                    <div class="w-clear">
+                        <form asp-action="SendRecord" asp-route-returnUrl="Contact">
+                            <div class="w-clear">
+                                <div class="box-lh">
+                                    <div class="w-clear">
+                                        <input asp-for="ContactName" class="ipct input" placeholder="Họ và tên (*)" />
+                                        <span asp-validation-for="ContactName" class="text-danger"></span>
+                                    </div>
+                                    <div class="w-clear">
+                                        <input asp-for="ContactNumber" class="ipct input" placeholder="Điện thoại (*)" />
+                                        <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                                    </div>
+                                    <div class="w-clear">
+                                        <input asp-for="ContactEmail" type="email" class="ipct input" placeholder="Email (*)" />
+                                        <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                                    </div>
+                                    <div class="w-clear" style="margin: 0px 0 0 0">
+                                        <textarea asp-for="Content" cols="52" rows="3" class="tact input" placeholder="Nội dung"></textarea>
+                                        <span asp-validation-for="Content" class="text-danger"></span>
+                                    </div>
+                                    <span class="text-danger" style="color: red">@TempData["Error"]</span>
+                                    <div class="w-clear text-center">
+                                        <input type="hidden" value="lien-he" name="cm" />
+                                        <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                        <input type="submit" value="Gửi" class="btnct button" />
+                                        <input type="hidden" value="Nhập lại" onclick="document.frm.reset();" class="btnct button" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</contents>

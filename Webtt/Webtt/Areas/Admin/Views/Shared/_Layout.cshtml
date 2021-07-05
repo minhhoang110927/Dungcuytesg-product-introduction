@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/product-admin.css">
+    <link rel="stylesheet" href="~/css/style-admin.css">
+    <link rel="stylesheet" href="~/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <li>
+                        <a asp-area="Admin" asp-controller="HomeAd" asp-action="Index">
+                            <span class="icon"></span>
+                            <span class="title">
+                                <h2>Dụng Cụ Y Tế Sài Gòn</h2>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Product" asp-action="Index">
+                            <span class="icon"><i class="fa fa-product-hunt" aria-hidden="true"></i></span>
+                            <span class="title"> Quản lý sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Newss" asp-action="Index">
+                            <span class="icon"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+                            <span class="title">Quản lý tin tức</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="AccountManage" asp-action="Index">
+                            <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <span class="title">Quản lý tài khoản</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Categories" asp-action="Index">
+                            <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                            <span class="title">Quản lý danh mục sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="HomeAd" asp-action="ViewRecord">
+                            <span class="icon"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+                            <span class="title">Quản lý thư liên hệ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="AccountManage" asp-action="changePassword">
+                            <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <span class="title">Đổi mật khẩu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Account" asp-action="Logout">
+                            <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                            <span class="title">Đăng xuất</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <partial name="_LoginPartial" />
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+
+    <script>
+        @RenderSection("Scripts", required: false)
+        function toggleMenu() {
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+        document.querySelector(".user ul li").addEventListener("click", function () {
+            this.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

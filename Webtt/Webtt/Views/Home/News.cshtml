@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Webtt.Models.News>
+@{
+    ViewData["Title"] = "Tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<contents>
+    <div class="w-clear wikis">
+        <div class="w-clear">
+            <div class="w-clear">
+                <div class="main-tit">
+                    <h2 class="name">Tin tức - Sự kiện</h2>
+                </div>
+            </div>
+        </div>
+        <div class="w-clear pad_10 all-new">
+            <div class="box-new">
+                @foreach (var item in Model)
+                {
+                    <div class="row-new">
+                        <div class="img-blog">
+                            <a asp-action="Index" asp-controller="NewsDetail" asp-route-id="@item.NewsId" asp-route-name="@item.NewsTitle" tabindex="-1">
+                                <img src="~/img/@item.NewsImage" alt="">
+                            </a>
+                        </div>
+                        <div class="content-blog">
+                            <a asp-action="Index" asp-controller="NewsDetail" asp-route-id="@item.NewsId" asp-route-name="@item.NewsTitle" tabindex="-1">
+                                <h3>@item.NewsTitle</h3>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</contents>

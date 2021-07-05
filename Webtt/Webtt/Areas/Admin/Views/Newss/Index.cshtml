@@ -1,0 +1,46 @@
+﻿@{ ViewData["Title"] = "Tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+@model List<News>
+<div class="Add">
+    <div class="Add-product">
+        <h2>Tin tức : @Model.Count</h2>
+        <p>Thêm tin tức:</p>
+        <a asp-controller="Newss" asp-action="Add">
+            <i class="add-product fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="details-product">
+    <div class="products">
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Hình ảnh</td>
+                    <td>Tiêu đề</td>
+                    <td>Tùy chọn</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr>
+        <td>@item.NewsId</td>
+        <td><img src="~/img/@item.NewsImage" class="img-thumbnail" asp-append-version="true" style="width:150px;height:150px" /></td>
+        <td>@item.NewsTitle</td>
+        <td>
+            <a asp-controller="Newss" asp-action="Edit" asp-route-id="@item.NewsId">
+                <i class=" edit fa fa-pencil" aria-hidden="true"></i>
+            </a>
+            <a asp-controller="Newss" asp-action="Delete" asp-route-id="@item.NewsId">
+                <i class=" delete fa fa-trash" aria-hidden="true"></i>
+            </a>
+        </td>
+    </tr>
+}
+            </tbody>
+        </table>
+
+    </div>
+</div>

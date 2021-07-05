@@ -1,0 +1,27 @@
+﻿@model Webtt.Models.Category
+
+@{ ViewData["Title"] = "Xóa danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="container">
+    <h1 class="add">Xóa danh mục</h1>
+    <hr />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CategoryId" />
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Tên danh mục</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.CategoryName)
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input class="submit-form" type="submit" value="Xóa">
+        </div>
+    </form>
+    <div class="back">
+        <a class="button-delete" asp-action="Index">Trở về</a>
+    </div>
+</div>

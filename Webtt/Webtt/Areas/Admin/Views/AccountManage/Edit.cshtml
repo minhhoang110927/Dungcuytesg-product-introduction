@@ -1,0 +1,37 @@
+﻿@model Webtt.Models.User
+@{ ViewData["Title"] = "Sửa tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="container">
+    <h1 class="add">Sửa tài khoản</h1>
+    <hr />
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Tên</label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="FullName" class="input-form" type="text">
+                <span asp-validation-for="FullName" class="text-danger" style="color:red"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Email</label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="Email" class="input-form" type="text">
+                <span asp-validation-for="Email" class="text-danger" style="color:red"></span>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input class="submit-form" type="submit" value="Lưu">
+        </div>
+    </form>
+    <div class="back">
+        <a class="button-edit" asp-action="Index">Trở về</a>
+    </div>
+</div>

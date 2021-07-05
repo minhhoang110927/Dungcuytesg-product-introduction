@@ -1,0 +1,8 @@
+Add-Migration InitData 
+Update-Database 
+Add-Migration SeedData 
+Update-Database 
+Add-Migration CreatingIdentity 
+Update-database
+Add-Migration InsertedRoles
+Update-database 

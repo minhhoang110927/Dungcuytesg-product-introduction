@@ -1,0 +1,50 @@
+﻿@{ ViewData["Title"] = "Sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Product>
+
+<div class="Add">
+    <div class="Add-product">
+        <h2>Sản phẩm : @Model.Count</h2>
+        <p>Thêm sản phẩm:</p>
+        <a asp-controller="Product" asp-action="Add">
+            <i class="add-product fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="details-product">
+    <div class="products">
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Hình ảnh</td>
+                    <td>Tên sản phẩm</td>
+                    <td style="width: 400px">Mô tả</td>
+                    <td>Giá</td>
+                    <td>Tùy chọn</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr>
+        <td>@item.ProductId</td>
+        <td><img src="~/img/@item.ProductImage" class="img-thumbnail" style="width:150px;height:150px" /></td>
+        <td>@item.ProductName</td>
+        <td style="width: 400px">@item.Description</td>
+        <td>@item.ProductPrice</td>
+        <td>
+            <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.ProductId">
+                <i class=" edit fa fa-pencil" aria-hidden="true"></i>
+            </a>
+            <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.ProductId">
+                <i class=" delete fa fa-trash" aria-hidden="true"></i>
+            </a>
+        </td>
+    </tr>}
+            </tbody>
+        </table>
+    </div>
+</div>

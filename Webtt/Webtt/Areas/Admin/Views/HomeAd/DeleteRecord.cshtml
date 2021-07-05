@@ -1,0 +1,51 @@
+﻿@model Webtt.Models.Contact
+
+@{ ViewData["Title"] = "Xóa thư";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="container">
+    <h1 class="add">Xóa thư</h1>
+    <hr />
+    <form asp-action="DeleteRecord">
+        <input type="hidden" asp-for="ContactId" />
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Tên người gửi</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.ContactName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Số điện thoại</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.ContactNumber)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Email</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.ContactEmail)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Nội dung</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.Content)
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input class="submit-form" type="submit" value="Xóa">
+        </div>
+    </form>
+    <div class="back">
+        <a class="button-delete" asp-action="ViewRecord">Trở về</a>
+    </div>
+</div>

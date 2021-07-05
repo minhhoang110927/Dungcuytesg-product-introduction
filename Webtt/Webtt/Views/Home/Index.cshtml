@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Webtt.Models.Contact
+<slide>
+    <div id="Container" class="w-clear">
+        <div class="w-clear wikis">
+            <div class="w-clear">
+                <div class="left">
+                    <div class="box-left w-clear">
+                        <div class="left-tit">
+                            <div class="name flex">
+                                <span>Danh mục sản phẩm</span>
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                        <div class="w-clear left-box">
+                            <ul class="menu-left">
+                                @foreach (var category in ViewBag.Categories)
+                                {
+                                    <li class="menu-level1">
+                                        <a asp-controller="Home" asp-action="CategoryProduct" asp-route-id="@category.CategoryId" asp-route-name="@category.CategoryName">@category.CategoryName</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mid">
+                    <div class="pad_10 w-clear">
+                        <a class="bt_menu">
+                            <img src="../img/km-25.png" alt="Khuyến mãi"> Khuyến mãi
+                        </a>
+                        <a class="bt_menu">
+                            <img src="../img/hot-25.png" alt="Khuyến mãi"> Sản phẩm giá tốt
+                        </a>
+                    </div>
+                    <div class=" slider ">
+                        <div class="w-clear">
+                            <div id="slider1_container" style="position: relative;width: 930px; height: 360px;">
+                                <div u="slides" style="cursor: move;width: 930px; height: 360px;overflow: hidden;">
+                                    <div>
+                                        <img u="image" src="../img/15612815300.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick_3 slick_pad_5 slick-initialized slick-slider">
+                        <div class="slick-list draggable">
+                            <div class="slick-track" role="listbox" style="/* opacity: 1; */width: 1220px;transform: translate3d(0px, 0px, 0px);">
+                                <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
+                                    <a href="">
+                                        <img src="../img/quang-cao-2-15601327472.png" alt="quang cao">
+                                    </a>
+                                </div>
+                                <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
+                                    <a href="">
+                                        <img src="../img/qua-tang-15601327471.png" alt="qua tang">
+                                    </a>
+                                </div>
+                                <div class="item slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 400px;">
+                                    <a href="">
+                                        <img src="../img/quang-cao-15601327470.png" alt="quang cao">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <div class="w-clear sanpham">
+                            <div class="w-clear wikis">
+                                <div class="main-tit w-clear">
+                                    <div class="name">
+                                        @category.CategoryName
+                                    </div>
+                                    <a class="more" asp-controller="Home" asp-action="CategoryProduct" asp-route-id="@category.CategoryId" asp-route-name="@category.CategoryName">
+                                        Xem tất cả
+                                    </a>
+                                </div>
+                                <div class="w-clear">
+                                    <div class="slick_5 slick-initialized slick-slider">
+                                        <div aria-live="polite" class="slick-list draggable">
+                                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+                                                @foreach (var item in ViewBag.ProductList)
+                                                {
+                                                    @if (@item.CategoryId == category.CategoryId)
+                                                    {
+                                                        <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                                             style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+                                                            <div class="box-sp w-clear">
+                                                                <a tabindex="-1" asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName">
+                                                                    <div class="images" style="text-align:center; height:178px">
+                                                                        <img src="~/img/@item.ProductImage" alt="" style="max-height:100%; max-width:100%">
+                                                                    </div>
+                                                                </a>
+                                                                <div class="info w-clear">
+                                                                    <div class="w-clear">
+                                                                        <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                                            <h3>
+                                                                                @item.ProductName
+                                                                            </h3>
+                                                                        </a>
+                                                                        <div class="info-gia flex">
+                                                                            <div class="gia">
+                                                                                Giá:
+                                                                                <span>@item.ProductPrice</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</slide>
+<contents>
+    <banner_bottom>
+        <div id="bottom" style="background-image: url(../img/1560133446_bg.png)">
+            <div class="w-clear wikis">
+                <div class="flex col_3">
+                    <div class="w-clear"></div>
+                    <div class="w-clear text-center">
+                        <p style="text-align:center"><img alt="" height="148" src="../img/49263629_296856154298104_7647392654409334784_n.png" width="148" /></p>
+                        <p style="text-align: center;"><span style="line-height:2.0;"><span style="font-size:18px;">Liên hệ với chúng tôi qua hotline</span></span></p>
+                        <p style="text-align: center;"><strong><span style="font-family:utma;"><span style="line-height:1.0;"><span style="font-size:26px;"><span style="color:#FF0000;">091 528 2266</span></span></span></span></strong></p>
+                        <p style="text-align: center;"><strong style="text-align: center;"><span style="font-family: utma;"><span style="line-height: 1;"><span style="font-size: 26px;"><span style="color: rgb(255, 0, 0);">093 885 2120</span></span></span></span></strong></p>
+                        <p style="text-align: center;"> </p>
+                    </div>
+                    <div class="w-clear">
+                        <div class="khung_lh">
+                            <div class="name">Liên hệ </div>
+                            <p>Điền đầy đủ thông tin bên dưới để đặt hàng hoặc liên hệ với chúng tôi</p>
+                            <form asp-action="SendRecord" asp-route-returnUrl="Index" name="form1">
+                                <div class="w-clear">
+                                    <div class="box-lh">
+                                        <div class="w-clear">
+                                            <input asp-for="ContactName" class="ipct input" placeholder="Họ và tên (*)" />
+                                            <span asp-validation-for="ContactName" class="text-danger"></span>
+                                        </div>
+                                        <div class="w-clear">
+                                            <input asp-for="ContactNumber" class="ipct input" placeholder="Điện thoại (*)" />
+                                            <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                                        </div>
+                                        <div class="w-clear">
+                                            <input asp-for="ContactEmail" type="email" class="ipct input" placeholder="Email (*)" />
+                                            <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                                        </div>
+                                        <div class="w-clear" style="margin: 0px 0 0 0">
+                                            <textarea asp-for="Content" cols="52" rows="3" class="tact input" placeholder="Nội dung"></textarea>
+                                            <span asp-validation-for="Content" class="text-danger"></span>
+                                        </div>
+                                        <span class="text-danger" style="color: red">@TempData["Error"]</span>
+                                        <div class="w-clear text-center">
+                                            <input type="hidden" value="lien-he" name="cm" />
+                                            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                            <input type="submit" value="Gửi" class="btnct button" />
+                                            <input type="hidden" value="Nhập lại" onclick="document.frm.reset();" class="btnct button" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </banner_bottom>
+</contents>

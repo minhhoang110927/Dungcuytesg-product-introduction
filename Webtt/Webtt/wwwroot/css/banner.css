@@ -1,0 +1,145 @@
+/* banner */
+#banner{
+    max-width: 1363px;
+    width: 100%;
+    height: 120px;
+    margin: 0px auto;
+    position: relative;
+    
+}
+.banner .flex {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+.banner-mid{
+    text-align: center; 
+    position: absolute;
+    margin: 0 0 0 300px;
+} 
+.banner-right{
+    position: absolute;
+    margin: 0 0 0 300px;
+}
+.banner .banner-l {
+    position: relative;
+    text-align: left;
+    z-index: 99;
+}
+.img{
+    border: none;
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+.banner_img{
+    z-index: 99;
+    display: inline-block;
+}
+.banner .door{
+    color: #ed1c24;
+    font: 15px rb;
+    padding: 10px 0 10px 30px;
+    background: url(../img/open-26.png) no-repeat left center;
+    text-align: left;
+}
+.banner .door span {
+    color: #000;
+    font: 16px rr;
+}
+.hotline {
+    font: bold 14px/20px Arial;
+    padding: 10px 0px 10px 30px;
+    display: inline-block;
+    z-index: 850;
+    position: relative;
+    background: url(../img/phone-26.png) no-repeat left center;
+}
+.banner .hotline{
+    color: #000;
+    font: 18px rb;
+    padding: 10px 0 10px 30px;
+    font-weight: bolder;
+}
+.banner .hotline span {
+    color: #ed1c24;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.banner-right > span{
+    display: block;
+}
+.banner .banner-right {
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    font: 15px rr;
+    z-index: 22;
+    white-space: nowrap;
+}
+.search {
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px;
+    background: #fff;
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 450px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    background-size: 100% 100%;
+    border: 1px solid #cdcdcd;
+}
+.search .input {
+    max-width: 100%;
+    width: calc(100% - 100px);
+    line-height: 20px;
+    font-family: rr;
+    box-sizing: border-box;
+    background: none;
+    position: relative;
+    z-index: 9;
+    outline: none;
+    border: none;
+    line-height: 100%;
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+    display: block;
+}
+.search .bt-search {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    top: 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font: 900 15px Arial;
+    color: #fff;
+    margin: 0;
+    padding: 8px 15px;
+    display: block;
+    text-align: center;
+    background: #d60c0c;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index: 99;
+}
+.logo img {
+    z-index: 99;
+    position: relative;
+    /* max-height: 120px; */
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}

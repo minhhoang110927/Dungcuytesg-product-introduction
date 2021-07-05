@@ -1,0 +1,85 @@
+﻿@model Webtt.Models.Product
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var relatedProduct = ViewBag.RelatedProduct;
+}
+<contents>
+    <div class="w-clear wikis">
+        <div class="w-clear">
+            <div class="w-clear box-share">
+                <div class="addthis_native_toolbox">
+                    <div class="card">
+                        <div class="container-fliud">
+                            <div class="wrapper row">
+                                <div class="preview col-md-6">
+                                    <div class="preview-pic tab-content">
+                                        <div class="tab-pane active" style="text-align: center" id="pic-1"><img src="~/img/@Html.DisplayFor(model => model.ProductImage)" style="height:350px; width:auto" /></div>
+                                    </div>
+                                </div>
+                                <div class="details col-md-6">
+                                    <h2 class="product-title"> @Html.DisplayFor(model => model.ProductName)</h2>
+                                    <h3>Mô tả:</h3>
+                                    <p class="product-description" style="font-size: 16px;">
+                                        @Html.DisplayFor(model => model.Description)
+                                    </p>
+                                    <h3 class="price">Giá: <span> @Html.DisplayFor(model => model.ProductPrice)</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if (relatedProduct != null)
+                    {
+                        <div class="w-clear sanpham">
+                            <div class="w-clear wikis">
+                                <div class="main-tit w-clear">
+                                    <div class="name">
+                                        Sản phẩm liên quan
+                                    </div>
+                                    <a class="more" asp-action="CategoryProduct" asp-controller="Home" asp-route-id="@ViewBag.Category.CategoryId" asp-route-name="@ViewBag.Category.CategoryName" tabindex="-1">Xem tất cả</a>
+                                </div>
+                                <div class="w-clear">
+                                    <div class="slick_5 slick-initialized slick-slider">
+                                        <div aria-live="polite" class="slick-list draggable">
+                                            <div class="slick-track" role="listbox" style="opacity: 1; display: flex; width: 4444px; transform: transform3d(-2020px, 0px, 0px) ; ">
+
+                                                @foreach (var item in relatedProduct)
+                                                {
+                                                    <div class="w-clear slick-slide slick-cloned" tabindex="-1" role="option" aria-describedby="slick-slide67"
+                                                         style="width: 202px;" data-slick-index="-5" aria-hidden="true">
+                                                        <div class="box-sp w-clear" style=" height: 300px">
+                                                            <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                                <div class="images" style="text-align:center; height:178px">
+                                                                    <img src="~/img/@item.ProductImage" alt="img" style="max-height:100%; max-width:100%">
+                                                                </div>
+                                                            </a>
+                                                            <div class="info w-clear">
+                                                                <div class="w-clear">
+                                                                    <a asp-action="Index" asp-controller="Detail" asp-route-id="@item.ProductId" asp-route-name="@item.ProductName" tabindex="-1">
+                                                                        <h3>
+                                                                            @item.ProductName
+                                                                        </h3>
+                                                                    </a>
+                                                                    <div class="info-gia flex">
+                                                                        <div class="gia">
+                                                                            Giá:
+                                                                            <span>@item.ProductPrice</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</contents>

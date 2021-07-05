@@ -1,0 +1,152 @@
+/* chatbox
+.coccoc-alo-phone.combo {
+    zoom: 0.8;
+    bottom: 30px;
+}
+.coccoc-alo-phone.coccoc-alo-show {
+    visibility: visible;
+}
+.coccoc-alo-phone {
+    position: fixed;
+    visibility: hidden;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 200000 !important;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: visibility .5s;
+    -moz-transition: visibility .5s;
+    -o-transition: visibility .5s;
+    transition: visibility .5s;
+    left: 5px;
+    bottom: 100px;
+}
+.coccoc-alo-phone.coccoc-alo-green .coccoc-alo-ph-circle-fill {
+    background-color: rgba(0,175,242,0.5);
+    background-color: #a6e3fa 9;
+    opacity: .75 !important;
+}
+.coccoc-alo-ph-circle-fill {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: #000;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: .1;
+    -webkit-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -moz-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -ms-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -o-animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.coccoc-alo-phone.coccoc-alo-show {
+    visibility: visible;
+}
+.coccoc-alo-phone {
+    position: fixed;
+    visibility: hidden;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 200000 !important;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: visibility .5s;
+    -moz-transition: visibility .5s;
+    -o-transition: visibility .5s;
+    transition: visibility .5s;
+    left: 5px;
+    bottom: 100px;
+}
+.bt_open {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.br_50, .br_50 img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.combo .bt_combo i {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    display: block;
+    background: #339af0;
+    padding: 10px 0;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    position: relative;
+    z-index: 9999;
+    box-sizing: border-box;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#back-top {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    text-align: center;
+    display: none;
+    z-index: 999999;
+}
+.fb_reset {
+    background: none;
+    border: 0;
+    border-spacing: 0;
+    color: #000;
+    cursor: auto;
+    direction: ltr;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    word-spacing: normal;
+}
+.combo .box_hide {
+    position: absolute;
+    bottom: 100%;
+    left: 25px;
+    right: 25px;
+    top: auto;
+}
+.box_hide {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+} */

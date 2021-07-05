@@ -1,0 +1,171 @@
+.Add{
+    position: relative;
+    width: calc(100% - 350px);
+    margin: 20px 20px;
+    height: 60px;
+    background-color: #fff;
+    width: 100%;
+}
+.Add .Add-product p{
+    position: absolute;
+    margin-left: calc(100% - 290px);
+    margin-top: 20px;
+    color: black;
+    font-size: 18px;
+}
+.show{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -.75rem;
+    margin-left: -.75rem;
+}
+.show-item{
+    width: auto;
+    display: inline-block;
+}
+.details-product .products .cardHeader .show .show-item label{
+    font-size: 18px;
+}
+.details-product .products .cardHeader .show .show-item select{
+    width: 60px;
+    margin-left: 10px;
+    border: 1px solid rgb(161 156 156);
+    height: 30px;
+    border-radius: 5px;
+}
+.details-product .products .cardHeader .filter .filter-search label{
+    font-size: 18px;
+}
+.details-product .products .cardHeader .filter .filter-search input{
+    width: 200px;
+    margin-left: 10px;
+    border: 1px solid rgb(161 156 156);
+    height: 30px;
+    border-radius: 5px;
+}
+.details-product{
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+}
+.details-product .products{
+    position: relative;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+.details-product table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details-product table thead td{
+    font-weight: 600;
+}
+.details-product .products table tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details-product .products table tbody tr:last-child{
+    border-bottom: none;
+}
+.details-product .products table tbody tr:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+.details-product .products table tr td {
+    padding: 9px 5px;
+}
+.details-product .products table thead tr td:last-child,
+.details-product .products table tbody tr td:last-child{
+    text-align: right;
+}
+.add-product{
+    position: relative;
+    padding: 12px 14px;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    width: 40px;
+    height: 40px;
+    margin-left: calc(100% - 150px);
+    margin-top: 10px;
+}
+.edit{
+    position: relative;
+    padding: 10px 12px;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+.delete{
+    position: relative;
+    padding: 10px 12px;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;   
+    letter-spacing: 1px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+.details-product .products table tbody tr td .fa{
+    font-size: 20px;
+}
+.main .Add .Add-product h2{
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+.control{
+    position: relative;
+    max-width: 100%;
+    height: 50px;
+}
+.control .numbers{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .35rem;
+    justify-content: center;
+}
+.control .numbers li a{
+    text-decoration: none;
+}
+div.control ul.numbers {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.page-link{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #4e73df;
+    background-color: #fff;
+    border: 1px solid #dddfeb;
+}
+@media (max-width: 480px){
+    .Add .Add-product p{
+        display: none;
+    }
+    .add-product{
+        text-align: right;
+        margin-left: 300px;
+    }
+    .details-product .products .cardHeader .show .show-item label{
+        font-size: 16px;
+        margin-left: 12px;
+    }
+}

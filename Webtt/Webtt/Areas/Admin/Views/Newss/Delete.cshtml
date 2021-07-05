@@ -1,0 +1,43 @@
+﻿@model Webtt.Models.NewsModels
+
+@{ ViewData["Title"] = "Xóa tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="container">
+    <h1 class="add">Xóa tin tức</h1>
+    <hr />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Tiêu đề</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.NewsTitle)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Hình ảnh</label>
+            </div>
+            <div class="col-md-8">
+                <img src="~/img/@Html.DisplayFor(model => model.ExistingImage)" class="img-thumbnail" style="width:150px;height:150px" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Nội Dung</label>
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.NewsContent)
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input class="submit-form" type="submit" value="Xóa">
+        </div>
+    </form>
+    <div class="back">
+        <a class="button-back" asp-action="Index">Trở về</a>
+    </div>
+</div>

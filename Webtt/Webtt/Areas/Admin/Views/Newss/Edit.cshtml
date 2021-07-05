@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Sửa tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model Webtt.Models.NewsModels
+
+<div class="container">
+    <h1 class="add">Sửa tin tức</h1>
+    <form asp-action="Edit" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Tiêu đề</label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="NewsTitle" class="input-form" />
+                <span asp-validation-for="NewsTitle" class="text-danger" style="color:red"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Hình ảnh</label>
+                <div class="col-md-8">
+                    <img src="~/img/@Model.ExistingImage" class="img-thumbnail" height="200" width="200" asp-append-version="true" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-nd-4"></div>
+            <div class="col-md-8">
+                <input asp-for="ItemImage" class="input-form" />
+                <span asp-validation-for="ItemImage" class="text-danger" style="color:red"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Nội dung</label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="NewsContent" class="input-form" />
+                <span asp-validation-for="NewsContent" class="text-danger" style="color:red"></span>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input class="submit-form" type="submit" value="Lưu">
+        </div>
+    </form>
+    <div class="back">
+        <a class="button-back" asp-action="Index">Trở về</a>
+    </div>
+</div>
+
+
+

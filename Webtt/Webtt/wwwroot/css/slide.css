@@ -1,0 +1,319 @@
+.left{
+    width: 270px;
+    float: left;
+    position: relative;
+    z-index: 99;
+}
+.box-left{
+    position: relative;
+}
+.left-tit{
+    text-align: center;
+    position: relative;
+    background: #393939;
+    align-items: center;
+}
+.slider .left-tit .name{
+    justify-content: space-between;
+    align-items: baseline;
+}
+.left-tit .name{
+    position: relative;
+    z-index: 11;
+    font: 16px/25px;
+    color: #fff;
+    padding: 15px 15px 10px 15px;
+    text-transform: uppercase;
+}
+.left-box{
+    z-index: 999;
+    border-top: none;
+    background: #f7f7f7;
+}
+
+#Slider .mid {
+    width: calc(100% - 270px);
+    
+}
+.mid {
+    width: calc(100% - 300px);
+    float: right;
+    z-index: 90;
+    position: relative;
+}   
+#Container .slick_3 .slick-slide {
+    float: right;
+}
+.pad_10 {
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+#slider .bt_menu{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px/30px;
+    margin: 0 15px;
+}
+#Container .slick_3{
+    padding: 10px 0;
+}
+
+.slick_pad_5{
+    margin: 0 -5px;
+}
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+}
+.slick-slider img {
+    display: inline-block;
+    
+}
+img {
+    border: none;
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+    
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+#Container .slick_3 .slick-slide {
+    float: right;
+}
+.slick_pad_5 .slick-slide {
+    padding: 0 5px;
+}
+
+/* ----product--- */
+.main-tit .more{
+    float: right;
+    font-size: 12px;
+    padding: 10px;
+    background-image: url(../img/dot-7.png) no-repeat left center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sanpham{
+    padding: 10px 0;
+    background-size: cover;
+}
+
+
+.slick-next{
+    right: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 46%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 99;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    transform: rotate(180deg);
+}
+.slick-prev{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 99;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+
+}
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.box-sp{
+    width: 200px;
+    position: relative;
+    margin: 0px auto 0px auto;
+    color: black;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 270px;
+
+}
+
+    .box-sp .images {
+        overflow: hidden;
+        position: relative;
+        background: #fff;
+        z-index: 99;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        text-align: center;
+        height: 178px;
+    }
+.box-sp .images img, .box-dt .images img, .box-qc .images img, .logo, .logo img{
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+        .box-sp .images img {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            -o-transition: all 0.5s;
+            z-index: 9;
+            background: #fff;
+            max-width: 100%;
+            max-height: 100%;
+        }
+.box-sp .new {
+    right: 10px;
+    position: absolute;
+    top: 10px;
+    width: 41px;
+    height: 41px;
+    background: url(../img/new.png) no-repeat;
+    z-index: 99;
+}
+
+.box-sp .info {
+    padding: px 0px;
+    text-align: center;
+    margin: 0px 0 0 0;
+    z-index: 999;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    align-items: center;
+}
+
+.box-sp .info > a, .box-sp .info > div {
+    width: 100%;
+}
+
+.box-sp .info-gia {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.box-sp .gia {
+    margin: 0 5px;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+}
+.box-sp .gia span {
+    display: inline-block;
+    margin: 0px;
+    color: #dc0000;
+    font: 16px/22px rb;
+    white-space: nowrap;
+}
+h3{
+    font-size: 16px;
+}
+
+
+/* ---container---- */
+#container{
+    padding: 30px 0;
+    position: relative;
+    background-size: cover;
+}
+.sukienclick .col_4{
+    margin: 0;
+    align-items: stretch;
+}
+.col_4 {
+    max-width: calc((100% / 4) -20px);
+    margin: 10px;
+}
+/* -------- */
+.control{
+    position: relative;
+    max-width: 100%;
+    height: 50px;
+}
+.control .numbers{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .35rem;
+    justify-content: center;
+}
+.control .numbers li a{
+    text-decoration: none;
+}
+div.control ul.numbers {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.page-link{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #4e73df;
+    background-color: #fff;
+    border: 1px solid #dddfeb;
+}

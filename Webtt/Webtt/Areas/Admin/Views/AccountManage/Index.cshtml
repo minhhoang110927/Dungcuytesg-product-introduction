@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Webtt.Models.User>
+@{ ViewData["Title"] = "Tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+<div class="Add">
+    <div class="Add-product">
+        <h2>Tài khoản</h2>
+        <p>Thêm mới:</p>
+        <a asp-controller="Account" asp-action="Register">
+            <i class="add-product fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="details-product">
+    <div class="products">
+        <table>
+            <thead>
+                <tr>
+                    <td>Tên</td>
+                    <td>Email</td>
+                    <td>Tùy chọn</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr>
+        <td>@item.FullName</td>
+        <td>@item.Email</td>
+        <td>
+            <a asp-controller="AccountManage" asp-action="Edit" asp-route-id="@item.Id">
+                <i class=" edit fa fa-pencil" aria-hidden="true"></i>
+            </a>
+            <a asp-controller="AccountManage" asp-action="Delete" asp-route-id="@item.Id">
+                <i class=" delete fa fa-trash" aria-hidden="true"></i>
+            </a>
+        </td>
+    </tr>
+}
+            </tbody>
+        </table>
+    </div>
+</div>

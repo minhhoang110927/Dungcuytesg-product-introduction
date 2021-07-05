@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Webtt.Models.Category>
+
+@{ ViewData["Title"] = "Danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="Add">
+    <div class="Add-product">
+        <h2>Danh mục sản phẩm : @ViewBag.Count</h2>
+        <p>Thêm danh mục:</p>
+        <a asp-controller="Categories" asp-action="Create">
+            <i class="add-product fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="details-product">
+    <div class="products">
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Tên danh mục</td>
+                    <td>Tùy chọn</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr>
+        <td>@item.CategoryId</td>
+        <td>@item.CategoryName</td>
+        <td>
+            <a asp-action="Edit" asp-controller="Categories" asp-route-id="@item.CategoryId">
+                <i class=" edit fa fa-pencil" aria-hidden="true"></i>
+            </a>
+            <a asp-action="Delete" asp-controller="Categories" asp-route-id="@item.CategoryId">
+                <i class=" delete fa fa-trash" aria-hidden="true"></i>
+            </a>
+        </td>
+    </tr>
+}
+            </tbody>
+        </table>
+    </div>
+</div>

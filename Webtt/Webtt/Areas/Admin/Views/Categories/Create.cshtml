@@ -1,0 +1,28 @@
+﻿@model Webtt.Models.Category
+
+@{ ViewData["Title"] = "Thêm danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
+
+<div class="container">
+    <h1 class="add">Thêm danh mục</h1>
+    <hr />
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="label-form" style="font-weight:bold">Tên danh mục</label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="CategoryName" class="input-form" type="text" placeholder="Nhập tên danh mục">
+                <span asp-validation-for="CategoryName" class="text-danger" style="color:red"></span>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <input class="submit-form" type="submit" value="Thêm">
+        </div>
+    </form>
+    <div class="back">
+        <a class="button-back" asp-action="Index">Trở về</a>
+    </div>
+</div>
